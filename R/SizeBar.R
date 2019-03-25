@@ -72,14 +72,11 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
   Size_plot <- (ggplot(data = Set_size_data, aes_string(x ="x", y = "y"))
                 + geom_bar(stat = "identity",colour = sbar_color, width = 0.4,
                            fill = sbar_color, position = "identity")
-                + scale_x_continuous(limits = c(0.5, (nrow(Set_size_data) + 0.5)),
-                                     breaks = c(0, max(Set_size_data)),
-                                     expand = c(0,0))
                 + theme_bw()
                 + theme(
                   panel.background = element_rect(fill = "ghostwhite"),
                   panel.border = element_rect(colour = "black", fill = NA, size = 0.25),
-                  plot.margin=unit(c(-0.11,1.3,0.5,0), "lines"),
+                  plot.margin=unit(c(-0.11,-1.3,0.5,0.5), "lines"),
                   axis.title.x = element_text(size = 8.3*x_axis_title_scale),
                   axis.text.x = element_text(size = 7*x_axis_tick_label_scale,
                                              vjust = 1, hjust = 0.5),
@@ -93,6 +90,9 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
                   panel.grid.minor.y = element_line(size = 0.25, colour = "darkgrey"),
                   panel.spacing.y = unit(1, "lines"),
                   plot.background = element_blank())
+                + scale_x_continuous(limits = c(0.5, (nrow(Set_size_data) + 0.5)),
+                                     breaks = c(0, max(Set_size_data)*0.05),
+                                     expand = c(0,0))
                 + xlab(NULL) + ylab(ylabel)
                 + coord_flip())
   
