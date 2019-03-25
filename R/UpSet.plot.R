@@ -97,8 +97,8 @@ BaseBoxPlot <- function(box_plot, position, size_plot_height, Main_bar_plot, Mat
   }
   if(is.null(set_metadata)){
     matrix_and_mainbar_right <- 100
-    matrix_and_mainbar_left <- 21
-    size_bar_right <- 20
+    matrix_and_mainbar_left <- 36
+    size_bar_right <- 35
     size_bar_left <- 1
   }
   else if(!is.null(set_metadata)){
@@ -175,8 +175,8 @@ NoAttBasePlot <- function(legend, size_plot_height, Main_bar_plot, Matrix_plot, 
   }
   if(is.null(set_metadata)){
     matrix_and_mainbar_right <- 100
-    matrix_and_mainbar_left <- 21
-    size_bar_right <- 20
+    matrix_and_mainbar_left <- 36
+    size_bar_right <- 35
     size_bar_left <- 1
   }
   else if(!is.null(set_metadata)){
@@ -244,8 +244,8 @@ BaseCustomPlot <- function(attribute_plots, plots, position, size_plot_height, M
 
   if(is.null(set_metadata)){
     matrix_and_mainbar_right <- 100
-    matrix_and_mainbar_left <- 21
-    size_bar_right <- 20
+    matrix_and_mainbar_left <- 36
+    size_bar_right <- 35
     size_bar_left <- 1
   }
   else if(!is.null(set_metadata)){
