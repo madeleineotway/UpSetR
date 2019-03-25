@@ -79,7 +79,7 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
                 + theme(
                   panel.background = element_rect(fill = "ghostwhite"),
                   panel.border = element_rect(colour = "black", fill = NA, size = 0.25),
-                  plot.margin=unit(c(-0.11,-1.3,0.5,0.5), "lines"),
+                  plot.margin=unit(c(-0.11,1.3,0.5,0), "lines"),
                   axis.title.x = element_text(size = 8.3*x_axis_title_scale),
                   axis.text.x = element_text(size = 7*x_axis_tick_label_scale,
                                              vjust = 1, hjust = 0.5),
@@ -97,7 +97,7 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
                 + coord_flip())
   
   if(set_size.show == TRUE){
-    Size_plot <- (Size_plot + geom_text(aes(label=y,vjust=0.5,hjust=0, angle = set_size_angle), size=num.size))
+    Size_plot <- (Size_plot + geom_text(aes(label=y,vjust=0.5,hjust=1.2, angle = set_size_angle), size=num.size))
   }
     
   if(scale_sets == "log10"){
