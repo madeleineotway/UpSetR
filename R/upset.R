@@ -223,6 +223,14 @@ upset <- function(data, nsets = 5, nintersects = 40, sets = NULL, keep.order = F
   }
 
   Matrix_layout <- Create_layout(Matrix_setup, matrix.color, Matrix_col, matrix.dot.alpha)
+  
+  ## Edit sourced from: https://www.r-bloggers.com/hacking-our-way-through-upsetr/
+  ## our modification
+  for(i in 1:Num_of_set) {
+    j <- which(Matrix_layout$y == i & Matrix_layout$value == 1)
+    if(length(j) > 0) Matrix_layout$color[j] <- sets.bar.color[i]
+  }
+  
   Set_sizes <- FindSetFreqs(New_data, first.col, Num_of_set, Set_names, keep.order)
   Bar_Q <- NULL
   if(is.null(queries) == F){
