@@ -83,6 +83,9 @@ Make_matrix_plot <- function(Mat_data,Set_size_data, Main_bar_data, point_size, 
   if(length(text_scale) > 1 && length(text_scale) <= 6){
     name_size_scale <- text_scale[5]
   }
+  
+  ## Edit sourced from: https://www.r-bloggers.com/hacking-our-way-through-upsetr/
+  Mat_data$line_col <- "black"
 
   Matrix_plot <- (ggplot()
                   + theme(panel.background = element_rect(fill = "ghostwhite"),
