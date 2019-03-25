@@ -92,8 +92,7 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
                   plot.background = element_blank())
                 + scale_x_continuous(limits = c(0.5, (nrow(Set_size_data) + 0.5)),
                                      breaks = c(0, max(Set_size_data)),
-                                     expand = c(0,0))
-                + scale_y_continuous(expand = c(0, 0, 0, 0.5))
+                                     expand = c(1,0,0,0))
                 + xlab(NULL) + ylab(ylabel)
                 + coord_flip())
   
