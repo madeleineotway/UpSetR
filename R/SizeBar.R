@@ -90,7 +90,7 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
                   panel.grid.minor.y = element_line(size = 0.25, colour = "darkgrey"),
                   panel.spacing.y = unit(1, "lines"),
                   plot.background = element_blank())
-                + scale_x_continuous(limits = c(0.5, (nrow(Set_size_data) + 15)),
+                + scale_x_continuous(limits = c(0.5, (nrow(Set_size_data) + 0.5)),
                                      breaks = c(0, max(Set_size_data)),
                                      expand = c(0,0))
                 + xlab(NULL) + ylab(ylabel)
